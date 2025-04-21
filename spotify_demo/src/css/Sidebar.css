@@ -1,19 +1,21 @@
 .sidebar {
-    width: 224px;
+    max-width: 224px;
+    max-height: 100vh;
     background: #030303;
     color: white;
-    padding: 24px;
 }
 
 .img-spotify {
-    width: 150px;
-    height: 45;
-
+    width: 148px;
+    height: 44px;
+    margin: 40px 24px;
 }
 
 .ul-nav {
     list-style-type: none;
     padding: 0;
+    margin-left: 24px;
+
 }
 
 .ul-nav button {
@@ -21,7 +23,6 @@
     background: none;
     color: grey;
     cursor: pointer;
-    padding: 10px;
     font-size: 13px;
     display: flex;
     flex-direction: row;
@@ -33,17 +34,30 @@
 }
 
 .icons {
-    margin-right: 10px;
-    font-size: 20px;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+
 }
 
 .letter-spacing {
+    width: 137px;
+    height: 14px;
     font-size: 12px;
-    margin-top: 80px;
-    letter-spacing: 3px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    margin-top: 81px;
+    margin-left: 24px;
     color: white;
     opacity: 0.6;
+}
+
+.li-container {
+    width: 200px;
+    height: 40px;
+
+
 }
 
 /* 

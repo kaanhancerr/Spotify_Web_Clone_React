@@ -4,7 +4,7 @@ import spotify from '../assets/spotify-logo.jpg'
 import { AiFillHome } from "react-icons/ai";
 import { CiSearch, CiFilter } from "react-icons/ci";
 import { BiLibrary } from "react-icons/bi";
-import { TextField } from '@mui/material';
+import { InputAdornment, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import { useSelector } from "react-redux";
@@ -30,17 +30,18 @@ const Sidebar = () => {
             <img src={spotify} alt="" className="img-spotify" />
             {/* <img src="../assets/spotify-logo.jpg" alt="Spotify Logo" /> */}
             <ul className="ul-nav">
-                <li><button onClick={() => navigate('/')} > <AiFillHome className="icons" /> Giriş</button></li>
-                <li><button onClick={() => navigate('browse')} > <CiSearch className="icons" />Gözat</button></li>
-                <li><button onClick={() => navigate('/library')} ><BiLibrary className="icons" /> Kitaplık</button></li>
+                <li className="li-container" ><button style={{ fontSize: 14, fontWeight: 500 }} onClick={() => navigate('/')} > <AiFillHome className="icons" /> Giriş</button></li>
+                <li className="li-container"><button style={{ fontSize: 14, fontWeight: 500 }} onClick={() => navigate('browse')} > <CiSearch className="icons" />Gözat</button></li>
+                <li className="li-container"><button style={{ fontSize: 14, fontWeight: 500 }} onClick={() => navigate('/library')} ><BiLibrary className="icons" /> Kitaplık</button></li>
             </ul>
             <p className="letter-spacing">Çalma Listelerin</p>
             <TextField size="small" variant="outlined" placeholder="Ara"
                 value={searchText} onChange={(e) => setSearchText(e.target.value)}
                 sx={{
-                    marginTop: 2,
-                    height: 34,
-                    width: 176,
+                    marginTop: '14px',
+                    marginLeft: '24px',
+                    height: 35,
+                    width: 177,
                     backgroundColor: "rgba(255, 255, 255, 0.15)",
                     borderRadius: 18,
 
@@ -56,14 +57,15 @@ const Sidebar = () => {
                     },
                 }}
                 InputProps={{
-                    startAdornment: <SearchIcon sx={{ color: 'white', opacity: 0.6, fontSize: 22 }} />,
-                    endAdornment: <FilterAltIcon sx={{ color: 'white', opacity: 0.6, fontSize: 22 }} />
+                    startAdornment: (
+                        <InputAdornment position="start"><SearchIcon sx={{ color: 'white', opacity: 0.6, fontSize: 22 }} /></InputAdornment>
+                    ),
+                    endAdornment: (
+                        <InputAdornment position="end"> <FilterAltIcon sx={{ color: 'white', opacity: 0.6, fontSize: 22 }} /></InputAdornment>
+                    )
                 }}
-                slotProps={{
-                    inputAdornment: {
-                        position: 'start',
-                    }
-                }}
+
+
             />
             {/* <div className="search-box-container">
                 <CiSearch className="search-icon" />
@@ -72,8 +74,8 @@ const Sidebar = () => {
             </div> */}
             <ul className="ul-nav">
                 {filteredPlaylists.map((list, index) => (
-                    <li key={index}>
-                        <button> {list.title} </button>
+                    <li style={{ width: 172, height: 18, marginTop: 16 }} key={index}>
+                        <button style={{ fontSize: 14, fontWeight: 500 }}> {list.title} </button>
                     </li>
                 ))}
             </ul>

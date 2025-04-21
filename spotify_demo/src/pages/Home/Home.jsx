@@ -8,7 +8,6 @@ import CardGrid from "../../components/CardGrid.jsx";
 const Home = () => {
     return (
         <div className="home">
-            <Topbar />
             <CardGrid />
 
 

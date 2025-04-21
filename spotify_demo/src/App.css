@@ -4,16 +4,17 @@
 }
 
 .app {
+
     display: flex;
     background-color: #121212;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
     min-height: 100vh;
+
 
 }
 
 .home {
     flex: 1;
-    padding: 20px;
     /* background-color: green; */
 }

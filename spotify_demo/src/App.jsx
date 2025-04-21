@@ -5,7 +5,7 @@ import Home from './pages/Home/Home.jsx'
 import PlayerBox from './components/Player.jsx'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Browse from './pages/Home/Browse.jsx';
-import Library from './pages/Library.jsx';
+import Library from './pages/Home/Library.jsx';
 import Topbar from './components/Topbar.jsx';
 
 
@@ -23,6 +23,8 @@ function App() {
         </Routes>
         <PlayerBox />
       </div>
+      <Topbar />
+
     </Router>
   )
 }

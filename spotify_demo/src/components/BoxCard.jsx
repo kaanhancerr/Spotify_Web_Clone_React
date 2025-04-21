@@ -31,7 +31,7 @@ const BoxCard = ({ title, image, subtitle, description, onClick, duration }) => 
                 </Box>
                 <Box sx={{ width: 171, height: 18 }}>
                     <Typography
-                        variant="subtitle1" sx={{ fontWeight: 500, fontSize: 14, marginLeft: 2 }} >{title}
+                        variant="subtitle1" sx={{ maxWidth: "100%", overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 500, fontSize: 14, marginLeft: 2 }} >{title}
                     </Typography>
                 </Box>
                 {/* ml = marginLeft 
