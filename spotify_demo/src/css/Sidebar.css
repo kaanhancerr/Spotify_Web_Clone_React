@@ -1,0 +1,78 @@
+.sidebar {
+    width: 224px;
+    background: #030303;
+    color: white;
+    padding: 24px;
+}
+
+.img-spotify {
+    width: 150px;
+    height: 45;
+
+}
+
+.ul-nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ul-nav button {
+    border: none;
+    background: none;
+    color: grey;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ul-nav button:hover {
+    color: white;
+}
+
+.icons {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.letter-spacing {
+    font-size: 12px;
+    margin-top: 80px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.6;
+}
+
+/* 
+.search-box-container {
+    margin-top: 14px;
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.195);
+    align-items: center;
+    height: 35px;
+    border-radius: 18px;
+    width: 210px;
+} */
+
+/* .search-input {
+    padding: 5px;
+    background: none;
+    border-style: none;
+    outline: none;
+}
+
+.search-icon {
+    font-size: 30px;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.381);
+}
+
+.search-filter {
+    font-size: 30px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.381);
+
+} */
