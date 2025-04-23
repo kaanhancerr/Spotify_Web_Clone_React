@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import { SpotifyLogo1 } from "../icons/icons";
 const Sidebar = () => {
 
     const [anchorEl, setAnchorEl] = useState(null); //menunun acildigi konum bilgisini burda tutacagiz.
@@ -73,14 +74,16 @@ const Sidebar = () => {
 
             {/* <div className="sidebar"> */}
 
-            <Box mt='41px'>
-                <img src={spotify} alt="" width={100} height={50} />
+            <Box mt='41px' mb='40px'>
+
+                <SpotifyLogo1 width={100} height={50} />
+
             </Box>
             {/* <img src="../assets/spotify-logo.jpg" alt="Spotify Logo" /> */}
             <Box display={"flex"} flexDirection='column' width='200px' height='120px'>
                 <List sx={{ width: '200px', height: '100%', fontSize: '14px', fontWeight: 500 }}>
                     {menuItems.map((item, index) => (
-                        <ListItem disablePadding key={index}>
+                        <ListItem disablePadding key={index} sx={{ mb: '11px' }}>
                             <ListItemButton
                                 sx={{
                                     padding: 0,
@@ -123,7 +126,7 @@ const Sidebar = () => {
                 </ul> */}
             </Box>
             {/* <p className="letter-spacing">Çalma Listelerin</p> */}
-            <Box mt='41px'>
+            <Box mt='80px'>
                 <Typography sx={{ opacity: 0.6, textTransform: 'uppercase', letterSpacing: 0.15, lineHeight: 1, fontSize: '12px', fontWeight: 400 }} variant='body2'>Çalma Listelerin</Typography>
                 <TextField size="small" variant="outlined" placeholder="Ara"
                     value={searchText} onChange={(e) => setSearchText(e.target.value)}
