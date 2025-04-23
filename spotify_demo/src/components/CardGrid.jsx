@@ -18,7 +18,7 @@ const CardGrid = () => {
     }, [])
 
     return (
-        <Box maxWidth='1080px' marginTop='120px' marginLeft='32px' sx={{}}>
+        <Box maxWidth='1080px' marginTop='55px' marginLeft='32px' sx={{}}>
             {/* Yakinda Calinanlarin gorunumu */}
             <Typography variant="h5" sx={{ fontWeight: "bold", marginBottom: 0, fontFamily: "sans-serif" }}>
                 Yakında Çalınanlar
@@ -44,7 +44,7 @@ const CardGrid = () => {
             <Typography variant="h5" sx={{ fontWeight: 'bold', marginTop: 6, fontFamily: "sans-serif" }}>
                 Tavsiye Edilenler
             </Typography>
-            <Typography variant="body2" sx={{ fontSize: 11, fontFamily: 'inherit' }}>
+            <Typography variant="body2" sx={{ fontSize: 12, fontFamily: 'inherit', opacity: 0.6 }}>
                 Sevdiğin her şeyden biraz dinle.
             </Typography>
             <Grid container spacing={2} marginTop={3}>
