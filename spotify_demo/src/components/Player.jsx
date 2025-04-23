@@ -57,6 +57,14 @@ const PlayerBox = () => {
 
     const progressPercent = totalDuration > 0 ? (currentTime / totalDuration) * 100 : 0;
 
+    const formatTime = (time) => {
+        const mins = Math.floor(time / 60);
+        const secs = (time % 60);
+        return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`
+        //         String(mins) ile mins değişkenini string'e dönüştürüyoruz. Mesela mins 2 ise, bu işlem onu "2"'ye çevirir.
+        // padStart(2, '0') fonksiyonu, eğer bu string'in uzunluğu 2'den küçükse, eksik olan basamağı '0' ile doldurur. Yani, "2"'yi "02"'ye çeviririz.
+    }
+
     const handlePlayPause = () => {
         setIsPlaying(!isPlaying);
     }
@@ -112,7 +120,7 @@ const PlayerBox = () => {
                         <SkipNextIcon sx={{ fontSize: 30, opacity: 0.5 }} />
                     </Box>
                     <Box gap={'10px'} display={"flex"} alignItems={"center"} >
-                        <Typography sx={{ fontSize: 14, opacity: 0.7 }}>{currentTime}</Typography>
+                        <Typography sx={{ fontSize: 14, opacity: 0.7 }}>{formatTime(currentTime)}</Typography>
                         <Box height={6} width={496} sx={{ opacity: 0.8, backgroundColor: 'white', position: 'relative', overflow: 'hidden' }}>
                             <Box height="100%" style={{ width: `${progressPercent}%`, backgroundColor: '#1db954', transition: 'width 0.3s ease' }} />
 
