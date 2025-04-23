@@ -23,7 +23,7 @@ function App() {
         </Routes>
         <PlayerBox />
       </div>
-      <Topbar />
+
 
     </Router>
   )
