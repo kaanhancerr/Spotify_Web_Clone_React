@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import '../css/Sidebar.css';
-import spotify from '../assets/spotify-logo.jpg'
 import { Box, IconButton, InputAdornment, List, ListItem, ListItemButton, ListItemText, Menu, MenuItem, TextField, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
@@ -58,7 +56,7 @@ const Sidebar = () => {
     // Gecici veri cogaltma scroll denemesi icin
 
     if (filteredPlaylists.length > 0) {
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 20; i++) {
             newFilteredPlaylists.push(filteredPlaylists[i % filteredPlaylists.length]);
         }
     }
@@ -182,11 +180,6 @@ const Sidebar = () => {
                                 '&:hover': {
                                     backgroundColor: 'transparent'
                                 },
-                                '&:hover .MuiSvgIcon-root': {
-                                    color: "white",
-                                    opacity: 1,
-
-                                }
 
                             }} >
                                 <ListItemText primary={list.title} sx={{
@@ -200,7 +193,13 @@ const Sidebar = () => {
 
                                 }} />
                                 <IconButton onClick={(e) => handleMenuClick(e, list)}
-                                    sx={{ color: 'white', opacity: 0.5 }}>
+                                    sx={{
+                                        color: 'grey',
+                                        '&:hover .MuiSvgIcon-root': {
+                                            color: 'white',
+                                            opacity: 1
+                                        }
+                                    }}>
 
                                     <MoreHorizIcon
                                     // sx={{
